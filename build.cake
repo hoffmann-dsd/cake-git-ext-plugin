@@ -31,18 +31,8 @@ Setup(context =>
     if (version == null)
         Error("Could not determine version from GitVersion.");
 
-    buildId = EnvironmentVariable("BUILD_BUILDID");
-
     Information($"Solution: {solution}");
     Information($"Version:  {version.FullSemVer}");
-
-    if (string.IsNullOrWhiteSpace(buildId))
-    {
-        buildId = version.SemVer;
-        Information($"No DevOps Build ID found. Using '{version.SemVer}' as tag.");
-    }
-    else
-        Information($"Azure DevOps Build ID: {buildId}");
 });
 
 ///////////////////////////////////////////////////////////////////////////////
