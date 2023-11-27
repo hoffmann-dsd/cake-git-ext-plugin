@@ -23,3 +23,8 @@ jobs:
       run: dotnet tool restore
     - name: Build
       run: dotnet cake
+    - name: Publish NuGet package
+      run: |    
+        echo "//nuget.pkg.github.com/OWNER/index.json" > NuGet.config
+        PACKAGE_PATH=$(find ./artifacts/nuget/ -name '*.nupkg' -print -quit)
+        dotnet nuget push "$PACKAGE_PATH" --source "github" --api-key "${{secrets.GITHUB_TOKEN}}"
