@@ -27,4 +27,4 @@ jobs:
     - name: Publish NuGet package
       run: |    
         PACKAGE_PATH=$(find ./artifacts -name '*.nupkg' -print -quit)
-        dotnet nuget push "$PACKAGE_PATH" --source "https://nuget.pkg.github.com/${{ env.GITHUB_REPOSITORY_OWNER }}/index.json" --api-key "${{ secrets.GITHUB_TOKEN }}" 
+        dotnet nuget push "$PACKAGE_PATH" --source "https://nuget.pkg.github.com/ChrisTTian667/index.json" --api-key "${{ secrets.GITHUB_TOKEN }}" 
