@@ -83,6 +83,12 @@ var hasMatch = context.GitGetChangeMatchPattern(changes, "your-regex-pattern");
 ```
 
 ## Usage
+
+The package is published to the GitHub Packages NuGet registry. To use the package in your Cake build script project, you must add the GitHub Packages NuGet registry to your Cake build script project's NuGet.config file. For more information, see the following link:
+
+https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry#installing-a-package
+
+
 Add the CakeExt.Git NuGet package to your Cake build script project.
 ```csharp
 #addin "nuget:?package=CakeExt.Git"
