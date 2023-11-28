@@ -28,4 +28,4 @@ jobs:
       run: |
         REPO_OWNER=$(echo $GITHUB_REPOSITORY | cut -d '/' -f 1) 
         PACKAGE_PATH=$(find ./artifacts -name '*.nupkg' -print -quit)
-        dotnet nuget push "$PACKAGE_PATH" --source "https://nuget.pkg.github.com/$REPO_OWNER/index.json" --api-key "${{ secrets.GITHUB_TOKEN }}" 
+        dotnet nuget push "$PACKAGE_PATH" --source "https://nuget.pkg.github.com/$REPO_OWNER/index.json" --api-key "${{ secrets.GITHUB_TOKEN }}" --skip-duplicate
