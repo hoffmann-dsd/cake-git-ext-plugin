@@ -1,6 +1,6 @@
 # cake-git-ext-plugin
 
-[![GitHub license](https://img.shields.io/github/license/ChrisTTian667/cake-git-ext-plugin.svg)](https://github.com/ChrisTTian667/cake-git-ext-plugin/main/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/hoffmann-dsd/cake-git-ext-plugin.svg)](https://github.com/hoffmann-dsd/cake-git-ext-plugin/main/LICENSE)
 
 ## Overview 
 
