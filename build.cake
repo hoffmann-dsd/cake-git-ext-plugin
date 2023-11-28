@@ -1,6 +1,4 @@
 #tool "dotnet:?package=GitVersion.Tool&version=5.12.0"
-#tool dotnet:?package=CycloneDX&version=2.8.1
-#addin nuget:?package=Cake.Docker&version=1.2.2
 
 ///////////////////////////////////////////////////////////////////////////////
 // ARGUMENTS
