@@ -37,8 +37,9 @@ public static class GitAlias
     /// Gets the last commit message
     /// </summary>
     [CakeMethodAlias]
-    public static string GitGetLastCommitMessage(this ICakeContext context) =>
-        context.Git("log -1 --pretty=format:'%s'").FirstOrDefault() ?? "";
+    public static string GitGetLastCommitMessage(this ICakeContext context, int skip = 0) =>
+        context.Git($"log -{1+skip} --pretty=format:'%s'")
+            .FirstOrDefault() ?? "";
 
     /// <summary>
     /// Gets the current branch name
